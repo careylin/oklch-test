@@ -173,66 +173,12 @@ hr{
   filter: brightness(0.8);
 }
 
-.l50 {
-  --light: 98%;
-  --chroma: 10;
-}
-
-.l100 {
-  --light: 93%;
-  --chroma: 30;
-}
-
-.l200 {
-  --light: 81%;
-  --chroma: 40;
-}
-
-.l300 {
-  --light: 69%;
-  --chroma: 45;
-}
-
-.l400 {
-  --light: 60%;
-  --chroma: 65;
-}
-
-.l500 {
-  --light: 48%;
-  --chroma: 55;
-}
-
-.l600 {
-  --light: 36%;
-  --chroma: 50;
-}
-
-.l700 {
-  --light: 28%;
-  --chroma: 35;
-}
-
-.l800 {
-  --light: 20%;
-  --chroma: 24;
-}
-
-.l900 {
-  --light: 12%;
-  --chroma: 20;
-}
-
 .green {
   --hue: 134.1;
 }
 
 .purp {
   --hue: 303.1;
-}
-
-.blue {
-  --hue: 275;
 }
 
 .sand {
