@@ -1,0 +1,257 @@
+@import 'colors.light.css';
+
+@font-face {
+    font-family: "Geist";
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url(font/Geist[wght].woff2) format("woff2");
+}
+
+@font-face {
+      font-family: "GeistPixel";
+    font-style: normal;
+    font-weight: regular;
+    font-display: swap;
+    src: url(font/GeistPixel-Circle.woff2) format("woff2");
+}
+
+body {
+  margin: 0;
+  background-color: light-dark(var(--color-bg-primary), var(--color-bg-inverse));
+  color:var(--color-text-primary);
+  font-family: "Geist", sans-serif;
+  font-feature-settings: "liga";
+  display: grid;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  position: relative;
+}
+
+.text{
+  color:var(--color-text-accent);
+}
+.text:hover{
+  --color-text-accent-hover:color-mix(in oklch, var(--color-text-accent), var(--color-text-dark) 10%);
+  color: var(--color-text-accent-hover);
+}
+
+.h600{
+  font-size: 3.2em;
+  line-height: 1.05;
+  font-weight: 450;
+  letter-spacing: -.04em;
+}
+.h500{
+  font-size: 2.2em;
+  line-height: 1.05;
+  font-weight: 450;
+  letter-spacing: -.02em;
+}
+.h200{
+  font-size: 1em;
+  line-height: 1.05;
+  font-weight: 400;
+  letter-spacing: 0em;
+}
+.pixel{
+  font-family: "GeistPixel", monospace;
+}
+
+.app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+h1, h2, h3, h4 {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+}
+
+code {
+  font-family: "GeistPixel", monospace;
+  background-color: var(--color-bg-inverse);
+  color:var(--color-text-primary-inverse);
+  padding: 0.2em 0.4em;
+  border-radius: 0.3em;
+}
+
+hr{
+  border: none;
+  border-top: 2px solid var(--color-border-separator);
+  margin: 2rem 0;
+}
+
+.chip {
+  width: 50px;
+  height: 50px;
+  background-color: oklch(var(--light) var(--chroma) var(--hue) / 1);
+}
+
+.blue{
+  --hue: 261;
+}
+
+.l50 {
+  --light: .96;
+  --chroma: .18;
+}
+.l100 {
+  --light: .90;
+  --chroma: 0.2032;
+}
+.l200 {
+  --light: .85;
+  --chroma: 0.2032;
+}
+.l300 {
+  --light: .55;
+  --chroma: 0.2032;
+}
+.l400 {
+  --light: .6;
+  --chroma: 0.2032;
+}
+.l500 {
+  --light: .48;
+  --chroma: 0.2032;
+}
+.l600 {
+  --light: .36;
+  --chroma: 0.2032;
+}
+.l700 {
+  --light: .3;
+  --chroma: 0.2032;
+}
+.l800 {
+  --light: .25;
+  --chroma: 0.2032;
+}
+.l900 {
+  --light: .2;
+  --chroma: 0.2032;
+}
+
+.Hstack {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-bottom: 1px;
+}
+
+.btn{
+  font-family: inherit;
+  display: inline-flex;
+  height: 40px;
+  padding: 10px 12px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 0em;
+}
+.btn.primary{
+  background-color: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+}
+.btn.accent{
+  background-color: var(--btn-accent-bg);
+  color: var(--btn-accent-text);
+}
+.btn:hover{
+  filter: brightness(0.9);
+}
+.btn:active{
+  filter: brightness(0.8);
+}
+
+.l50 {
+  --light: 98%;
+  --chroma: 10;
+}
+
+.l100 {
+  --light: 93%;
+  --chroma: 30;
+}
+
+.l200 {
+  --light: 81%;
+  --chroma: 40;
+}
+
+.l300 {
+  --light: 69%;
+  --chroma: 45;
+}
+
+.l400 {
+  --light: 60%;
+  --chroma: 65;
+}
+
+.l500 {
+  --light: 48%;
+  --chroma: 55;
+}
+
+.l600 {
+  --light: 36%;
+  --chroma: 50;
+}
+
+.l700 {
+  --light: 28%;
+  --chroma: 35;
+}
+
+.l800 {
+  --light: 20%;
+  --chroma: 24;
+}
+
+.l900 {
+  --light: 12%;
+  --chroma: 20;
+}
+
+.green {
+  --hue: 134.1;
+}
+
+.purp {
+  --hue: 303.1;
+}
+
+.blue {
+  --hue: 275;
+}
+
+.sand {
+  --hue: 80;
+}
+
+.orange {
+  --hue: 40.9;
+}
+
+.pink {
+  --hue: 15;
+}
+
+
+@media (prefers-reduced-motion) {
+  *,
+  ::before,
+  ::after {
+    animation: none !important;
+  }
+}
