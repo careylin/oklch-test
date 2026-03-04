@@ -1,0 +1,21 @@
+.heading {
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  margin: 0;
+}
+
+/* Levels — extends the existing h200/h300/h500/h600 scale */
+.heading--700 { font-size: 5rem;    line-height: 1;    font-weight: 500; letter-spacing: -0.05em; }
+.heading--600 { font-size: 3.2em;   line-height: 1.05; font-weight: 450; letter-spacing: -0.04em; }
+.heading--500 { font-size: 2.2em;   line-height: 1.05; font-weight: 450; letter-spacing: -0.02em; }
+.heading--400 { font-size: 1.75em;  line-height: 1.1;  font-weight: 450; letter-spacing: -0.01em; }
+.heading--300 { font-size: 1.5em;   line-height: 1.1;  font-weight: 450; letter-spacing: 0; }
+.heading--200 { font-size: 1.125em; line-height: 1.2;  font-weight: 500; letter-spacing: 0; }
+.heading--150 { font-size: 1em;     line-height: 1.2;  font-weight: 500; letter-spacing: 0; }
+.heading--100 { font-size: 1em;     line-height: 1.2;  font-weight: 500; letter-spacing: 0; }
+
+/* Alignment */
+.heading--left   { text-align: left; }
+.heading--center { text-align: center; }
+.heading--right  { text-align: right; }

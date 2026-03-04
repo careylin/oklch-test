@@ -1,0 +1,15 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Space */
+.stack--sm  { gap: 8px; }
+.stack--md  { gap: 16px; }
+.stack--lg  { gap: 24px; }
+.stack--xl  { gap: 32px; }
+
+/* Align (cross-axis = horizontal) */
+.stack--left   { align-items: flex-start; }
+.stack--center { align-items: center; }
+.stack--right  { align-items: flex-end; }

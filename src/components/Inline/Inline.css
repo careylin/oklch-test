@@ -1,0 +1,21 @@
+.inline {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* Space (both row and column gap for wrapped lines) */
+.inline--xs  { gap: 2px; }
+.inline--sm  { gap: 4px; }
+.inline--md  { gap: 8px; }
+.inline--lg  { gap: 16px; }
+.inline--xl  { gap: 24px; }
+
+/* Align (main-axis = horizontal) */
+.inline--left   { justify-content: flex-start; }
+.inline--center { justify-content: center; }
+.inline--right  { justify-content: flex-end; }
+
+/* Spread */
+.inline--fill > * { flex: 1; }
+.inline--hug  > * { flex: none; }

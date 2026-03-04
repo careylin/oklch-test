@@ -18,9 +18,10 @@
 
 body {
   margin: 0;
-  background-color: light-dark(var(--color-bg-primary), var(--color-bg-inverse));
+  background-color: light-dark(#fff, #000);
   color:var(--color-text-primary);
   font-family: "Geist", sans-serif;
+  font-size: 16px;
   font-feature-settings: "liga";
   display: grid;
   place-items: center;
@@ -32,29 +33,12 @@ body {
 .text{
   color:var(--color-text-accent);
 }
+
 .text:hover{
   --color-text-accent-hover:color-mix(in oklch, var(--color-text-accent), var(--color-text-dark) 10%);
   color: var(--color-text-accent-hover);
 }
 
-.h600{
-  font-size: 3.2em;
-  line-height: 1.05;
-  font-weight: 450;
-  letter-spacing: -.04em;
-}
-.h500{
-  font-size: 2.2em;
-  line-height: 1.05;
-  font-weight: 450;
-  letter-spacing: -.02em;
-}
-.h200{
-  font-size: 1em;
-  line-height: 1.05;
-  font-weight: 400;
-  letter-spacing: 0em;
-}
 .pixel{
   font-family: "GeistPixel", monospace;
 }
@@ -88,111 +72,108 @@ hr{
 }
 
 .chip {
-  width: 50px;
-  height: 50px;
+  width: 160px;
+  height: 80px;
   background-color: oklch(var(--light) var(--chroma) var(--hue) / 1);
 }
 
-.blue{
-  --hue: 261;
-}
-
 .l50 {
-  --light: .96;
-  --chroma: .18;
+  --light: .98;
+  --chroma: 0.03;
 }
 .l100 {
-  --light: .90;
-  --chroma: 0.2032;
+  --light: .93;
+  --chroma: 0.05;
 }
 .l200 {
   --light: .85;
-  --chroma: 0.2032;
+  --chroma: 0.08;
 }
 .l300 {
-  --light: .55;
-  --chroma: 0.2032;
+  --light: .75;
+  --chroma: 0.14;
 }
 .l400 {
-  --light: .6;
-  --chroma: 0.2032;
+  --light: .65;
+  --chroma: 0.19;
 }
 .l500 {
-  --light: .48;
-  --chroma: 0.2032;
+  --light: .53;
+  --chroma: 0.17;
 }
 .l600 {
-  --light: .36;
-  --chroma: 0.2032;
+  --light: .44;
+  --chroma: 0.15;
 }
 .l700 {
-  --light: .3;
-  --chroma: 0.2032;
+  --light: .35;
+  --chroma: 0.09;
 }
 .l800 {
-  --light: .25;
-  --chroma: 0.2032;
+  --light: .27;
+  --chroma: 0.08;
 }
 .l900 {
-  --light: .2;
-  --chroma: 0.2032;
+  --light: .20;
+  --chroma: 0.05;
 }
+
+.neutral, .neutral > *{
+  --hue:145;
+  --chroma: 0.013;
+}
+
+.jade{
+  --hue: 164.4;
+}
+
+.blue {
+  --hue: 253.3;
+}
+
+.teal{
+  --hue: 200.0;
+}
+
+.purple{
+  --hue: 308.4;
+}
+
+.pink{
+  --hue: 355.0;
+}
+
+.green {
+  --hue: 145;
+}
+
+.red{
+  --hue: 28;
+}
+
+.yellow{
+  --hue: 81;
+}
+
 
 .Hstack {
   display: flex;
   flex-direction: row;
-  gap: 12px;
+  gap: 0px;
   margin-bottom: 1px;
+  color: var(--color-neutral-transparent);
+}
+.Vstack {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0px;
+  margin-bottom: 0;
+  color: var(--color-neutral-transparent);
 }
 
-.btn{
-  font-family: inherit;
-  display: inline-flex;
-  height: 40px;
-  padding: 10px 12px;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  border-radius: 10px;
-  font-size: 1em;
-  font-weight: 400;
-  letter-spacing: 0em;
+section {
+  padding: 24px;
 }
-.btn.primary{
-  background-color: var(--btn-primary-bg);
-  color: var(--btn-primary-text);
-}
-.btn.accent{
-  background-color: var(--btn-accent-bg);
-  color: var(--btn-accent-text);
-}
-.btn:hover{
-  filter: brightness(0.9);
-}
-.btn:active{
-  filter: brightness(0.8);
-}
-
-.green {
-  --hue: 134.1;
-}
-
-.purp {
-  --hue: 303.1;
-}
-
-.sand {
-  --hue: 80;
-}
-
-.orange {
-  --hue: 40.9;
-}
-
-.pink {
-  --hue: 15;
-}
-
 
 @media (prefers-reduced-motion) {
   *,

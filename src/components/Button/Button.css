@@ -1,0 +1,153 @@
+.btn {
+  --control-height: var(--control-height-md);
+  --btn-bg: transparent;
+  --btn-fg: inherit;
+  --btn-bdr: none;
+  --control-padding: 0;
+
+  background-color: var(--btn-bg);
+  color: var(--btn-fg);
+  border: var(--btn-bdr);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  display: inline-flex;
+  height: var(--control-height);
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: filter 0.1s ease;
+  padding-inline: var(--control-padding);
+}
+
+.btn:hover {
+  filter: brightness(0.9);
+}
+
+.btn:active {
+  filter: brightness(0.8);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-text-accent);
+  outline-offset: 2px;
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Sizes */
+.btn--xs {
+  --control-height: var(--control-height-xs);
+  --control-padding: var(--control-inlinePadding-xs);
+  font-size: 0.8em;
+  --btn-shadow: 0 1px 2px oklch(0 0 0 / 0.12), 0 1px 4px oklch(0 0 0 / 0.08);
+    &.btn--ghost::before {
+      inset-inline: -10px;
+  }
+}
+.btn--sm {
+  --control-height: var(--control-height-sm);
+  --control-padding: var(--control-inlinePadding-sm);
+  --btn-shadow: 0 1px 3px oklch(0 0 0 / 0.14), 0 2px 6px oklch(0 0 0 / 0.08);
+    &.btn--ghost::before {
+      inset-inline: -10px;
+  }
+}
+.btn--md {
+  --control-height: var(--control-height-md);
+  --control-padding: var(--control-inlinePadding-md);
+  --btn-shadow: 0 2px 4px oklch(0 0 0 / 0.14), 0 3px 10px oklch(0 0 0 / 0.08);
+  &.btn--ghost::before {
+      inset-inline: -16px;
+  }
+}
+.btn--lg {
+  --control-height: var(--control-height-lg);
+  --control-padding: var(--control-inlinePadding-lg);
+  font-size: 1.05em;
+  --btn-shadow: 0 3px 6px oklch(0 0 0 / 0.14), 0 5px 14px oklch(0 0 0 / 0.09);
+    &.btn--ghost::before {
+      inset-inline: -20px;
+  }
+}
+.btn--xl {
+  --control-height: var(--control-height-xl);
+  --control-padding: var(--control-inlinePadding-xl);
+  font-size: 1.1em;
+  --btn-shadow: 0 4px 8px oklch(0 0 0 / 0.15), 0 8px 20px oklch(0 0 0 / 0.1);
+    &.btn--ghost::before {
+      inset-inline: -24px;
+  }
+}
+
+/* Elevated */
+.btn--elevated {
+  box-shadow: var(--btn-shadow);
+}
+
+/* Variants */
+.btn--accent {
+  --btn-bg: var(--btn-accent-bg);
+  --btn-fg: var(--btn-accent-text);
+}
+
+.btn--primary {
+  --btn-bg: var(--btn-primary-bg);
+  --btn-fg: var(--btn-primary-text);
+}
+
+.btn--secondary {
+  --btn-bg: var(--btn-secondary-bg);
+  --btn-fg: var(--btn-secondary-text);
+}
+
+.btn--tertiary {
+  --btn-bg: var(--btn-tertiary-bg);
+  --btn-fg: var(--btn-tertiary-text);
+}
+
+.btn--ghost {
+  --btn-bg: transparent;
+  --btn-fg: var(--btn-ghost-text);
+  padding-inline: 0;
+  position: relative; /* Key: Establishes a positioning context for the ::before element */
+  z-index: 1; /* Ensures button text is above the pseudo-element */
+  transition: color 0.3s ease; /* Smooth text color transition */
+  &.btn--elevated{
+    padding-inline: 16px;
+      &:hover::before {
+        inset-inline: 0;
+      }
+  }
+}
+
+.btn--ghost::before {
+  --btn-bg: var(--btn-ghost-bg);
+  background-color: var(--btn-bg);
+  content: '';
+  border-radius: inherit;
+  opacity: 0;
+  height:100%;
+  padding-inline: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.btn--ghost:hover::before {
+  opacity: 1;
+  transition: opacity 0.1s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
+}

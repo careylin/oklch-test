@@ -1,0 +1,15 @@
+.prose {
+  font-family: inherit;
+  color: inherit;
+  margin: 0;
+}
+
+/* Levels */
+.prose--300 { font-size: 1.125em; line-height: 1.6; font-weight: 400; }
+.prose--200 { font-size: 1em;     line-height: 1.5; font-weight: 400; }
+.prose--100 { font-size: 0.875em; line-height: 1.5; font-weight: 400; }
+
+/* Alignment */
+.prose--left   { text-align: left; }
+.prose--center { text-align: center; }
+.prose--right  { text-align: right; }
