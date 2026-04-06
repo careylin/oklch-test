@@ -1,0 +1,189 @@
+.badge {
+  --badge-bg: oklch(var (--color-conditions-grass));
+  --badge-fg: inherit;
+  --badge-bdr: none;
+  --badge-height: 32px;
+  --badge-padding: 8px;
+  --badge-font-size: 13px;
+  --badge-letter-spacing: 0.25px;
+
+  background-color: var(--badge-bg);
+  color: var(--badge-fg);
+  border: var(--badge-bdr);
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: var(--badge-height);
+  padding: 0 10px;
+  font-family: inherit;
+  font-size: var(--badge-font-size);
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: var(--badge-letter-spacing);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-decoration: none;
+  cursor: default;
+}
+
+/* Interactive states */
+a.badge,
+button.badge {
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+a.badge:hover,
+button.badge:hover {
+  background-color: oklch(from var(--badge-bg) l calc(c + .03) h);
+}
+
+a.badge:active,
+button.badge:active {
+  background-color: oklch(from var(--badge-bg) calc(l - 0.2) c h);
+}
+
+a.badge:focus-visible,
+button.badge:focus-visible {
+  outline: 2px solid var(--color-text-accent);
+  outline-offset: 2px;
+}
+
+button.badge {
+  border: none;
+  font: inherit;
+  font-weight: 600;
+  letter-spacing: var(--badge-letter-spacing);
+}
+
+/* Icon padding adjustment */
+.badge:has(.badge__icon) {
+  padding-left: 8px;
+}
+
+/* Sizes */
+.badge--sm {
+  --badge-height: 24px;
+  --badge-font-size: 11px;
+  padding: 0 6px;
+}
+
+.badge--sm:has(.badge__icon) {
+  padding-left: 4px;
+}
+
+/* ── Strong emphasis ── */
+.badge--neutral.badge--strong {
+  --badge-bg: var(--color-bg-primary);
+  --badge-fg: var(--color-text-primary);
+}
+
+.badge--inverted.badge--strong {
+  --badge-bg: var(--color-bg-inverse);
+  --badge-fg: var(--color-text-primary-inverse);
+}
+
+.badge--info.badge--strong {
+  --badge-bg: oklch(0.5525 0.1458 259.36)
+  --badge-fg: var(--color-text-primary-inverse);
+}
+
+.badge--error.badge--strong {
+  --badge-bg: #ba4c21;
+  --badge-fg: var(--color-text-primary-inverse);
+}
+
+.badge--caution.badge--strong {
+  --badge-bg: #edb326;
+  --badge-fg: var(--color-text-dark);
+}
+
+.badge--success.badge--strong {
+  --badge-bg: #458134;
+  --badge-fg: var(--color-text-primary-inverse);
+}
+
+.badge--custom.badge--strong {
+  --badge-bg: #8363b2;
+  --badge-fg: #f6f3fc;
+}
+
+/* ── Mid emphasis ── */
+.badge--neutral.badge--mid {
+  --badge-bg: var(--color-bg-secondary);
+  --badge-fg: var(--color-text-secondary);
+}
+
+.badge--inverted.badge--mid {
+  --badge-bg: rgba(0, 0, 0, 0.4);
+  --badge-fg: var(--color-text-primary-inverse);
+}
+
+.badge--info.badge--mid {
+  --badge-bg: #eef6fe;
+  --badge-fg: #30538b;
+}
+
+.badge--error.badge--mid {
+  --badge-bg: oklch(0.9664 0.0141 39.42);
+  --badge-fg: #ba4c21;
+}
+
+.badge--caution.badge--mid {
+  --badge-bg: #fef4e4;
+  --badge-fg: #926922;
+}
+
+.badge--success.badge--mid {
+  --badge-bg: oklch(0.9666 0.0163 142.56);
+  --badge-fg: #375c2d;
+}
+
+.badge--custom.badge--mid {
+  --badge-bg: #f6f3fc;
+  --badge-fg: #8363b2;
+}
+
+/* ── Weak emphasis ── */
+.badge--weak {
+  --badge-bg: transparent;
+}
+
+.badge--neutral.badge--weak {
+  --badge-fg: var(--color-text-secondary);
+  --badge-bdr: 1px solid var(--color-bdr-separator);
+}
+
+.badge--inverted.badge--weak {
+  --badge-fg: var(--color-text-primary);
+}
+
+.badge--info.badge--weak {
+  --badge-fg: #30538b;
+}
+
+.badge--error.badge--weak {
+  --badge-fg: #ba4c21;
+}
+
+.badge--caution.badge--weak {
+  --badge-fg: #926922;
+}
+
+.badge--success.badge--weak {
+  --badge-fg: #375c2d;
+}
+
+.badge--custom.badge--weak {
+  --badge-fg: #8363b2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a.badge,
+  button.badge {
+    transition: none;
+  }
+}

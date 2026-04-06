@@ -8,6 +8,7 @@
   --btn-bg: transparent;
   --btn-fg: inherit;
   --btn-bdr: none;
+  --control-radius: var(--control-radius-md);
 
   background-color: var(--btn-bg);
   color: var(--btn-fg);
@@ -21,10 +22,41 @@
   padding: 10px 12px;
   align-items: center;
   gap: 6px;
-  border-radius: 12px;
+  border-radius: var(--control-radius);
   cursor: pointer;
   white-space: nowrap;
   transition: filter 0.1s ease;
+}
+
+/* Sizes */
+
+.dropdown-trigger--sm {
+  --control-height: var(--control-height-sm);
+  --control-padding: var(--control-inlinePadding-sm);
+  --control-radius: var(--control-radius-sm);
+  --btn-shadow: 0 1px 3px oklch(0 0 0 / 0.14), 0 2px 6px oklch(0 0 0 / 0.08);
+    &.btn--ghost::before {
+      inset-inline: -10px;
+  }
+}
+.dropdown-trigger--md {
+  --control-height: var(--control-height-md);
+  --control-padding: var(--control-inlinePadding-md);
+  --control-radius: var(--control-radius-md);
+  --btn-shadow: 0 2px 4px oklch(0 0 0 / 0.14), 0 3px 10px oklch(0 0 0 / 0.08);
+  &.btn--ghost::before {
+      inset-inline: -16px;
+  }
+}
+.dropdown-trigger--lg {
+  --control-height: var(--control-height-lg);
+  --control-padding: var(--control-inlinePadding-lg);
+  --control-radius: var(--control-radius-lg);
+  font-size: 1.05em;
+  --btn-shadow: 0 3px 6px oklch(0 0 0 / 0.14), 0 5px 14px oklch(0 0 0 / 0.09);
+    &.btn--ghost::before {
+      inset-inline: -20px;
+  }
 }
 
 .dropdown-trigger:hover {
@@ -41,8 +73,18 @@
 }
 
 /* Variants */
-.dropdown-trigger--default {
-  --btn-bg: var(--btn-ghost-bg);
+.dropdown-trigger--accent {
+  --btn-bg: var(--btn-accent-bg);
+  --btn-fg: var(--btn-accent-text);
+}
+
+.dropdown-trigger--primary {
+  --btn-bg: var(--btn-primary-bg);
+  --btn-fg: var(--btn-primary-text);
+}
+
+.dropdown-trigger--tertiary {
+  --btn-bg: var(--btn-tertiary-bg);
   --btn-fg: var(--btn-tertiary-text);
   --btn-bdr: 1px solid var(--color-bdr-interactive);
 }
@@ -68,10 +110,10 @@
   border-radius: inherit;
   opacity: 0;
   height:100%;
-  inset-inline: -8px;
   padding-inline: 0;
   position: absolute;
   z-index: -1;
+  inset-inline: -16px;
 }
 
 .dropdown-trigger--ghost:hover::before {
@@ -103,7 +145,7 @@
   min-width: 180px;
   background-color: var(--color-bg-primary);
   border: 1px solid var(--color-bdr-separator);
-  border-radius: 12px;
+  border-radius: var(--control-radius);
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
 }
 
@@ -113,7 +155,7 @@
   padding: 8px 12px;
   background: none;
   border: none;
-  border-radius: 8px;
+  border-radius: var(--control-radius);
   font-family: inherit;
   font-size: inherit;
   color: var(--color-text-primary);

@@ -1,0 +1,31 @@
+.counter-badge {
+  --badge-bg: var(--color-bg-secondary);
+  --badge-fg: var(--color-text-primary);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 16px;
+  padding-inline: 4px;
+  border-radius: var(--radius-round);
+  background-color: var(--badge-bg);
+  color: var(--badge-fg);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Variants */
+.counter-badge--accent {
+  --badge-bg: var(--color-bg-accent);
+  --badge-fg: var(--color-text-dark);
+}
+
+.counter-badge--inverse {
+  --badge-bg: var(--color-bg-inverse);
+  --badge-fg: var(--color-text-primary-inverse);
+}

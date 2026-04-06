@@ -1,0 +1,151 @@
+.icon-btn {
+  --control-height: var(--control-height-md);
+  --btn-bg: transparent;
+  --btn-fg: inherit;
+  --btn-bdr: none;
+  --control-padding: 0;
+  --control-radius: var(--btn-radius-md);
+
+  --btn-icon-size: 20px;
+  --btn-shadow: none;
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--control-height);
+  height: var(--control-height);
+  padding: 0;
+  border: var(--btn-bdr);
+  border-radius: var(--control-radius);
+  background-color: var(--btn-bg);
+  color: var(--btn-fg);
+  cursor: pointer;
+  font-family: inherit;
+  transition: filter 0.1s ease;
+}
+
+.icon-btn:hover {
+  filter: brightness(0.9);
+}
+
+.icon-btn:active {
+  filter: brightness(0.8);
+}
+
+.icon-btn:focus-visible {
+  outline: 2px solid var(--color-text-accent);
+  outline-offset: 2px;
+}
+
+.icon-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.icon-btn__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--btn-icon-size);
+  height: var(--btn-icon-size);
+  overflow: clip;
+}
+
+.icon-btn__badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+}
+
+/* Sizes */
+.icon-btn--xs {
+  --control-height: var(--control-height-xs);
+  --control-radius: var(--btn-radius-xs);
+  --btn-icon-size: 16px;
+  --btn-shadow: 0 0 1px 0 oklch(0 0 0 / 0.3), 0 2px 4px 0 oklch(0 0 0 / 0.14);
+}
+
+.icon-btn--sm {
+  --control-height: var(--control-height-sm);
+  --control-radius: var(--btn-radius-sm);
+  --btn-icon-size: 20px;
+  --btn-shadow: 0 0 1px 0 oklch(0 0 0 / 0.3), 0 2px 4px 0 oklch(0 0 0 / 0.14);
+}
+
+.icon-btn--md {
+  --control-height: var(--control-height-md);
+  --control-radius: var(--btn-radius-md);
+  --btn-icon-size: 20px;
+  --btn-shadow: 0 0 1px 0 oklch(0 0 0 / 0.3), 0 4px 8px 0 oklch(0 0 0 / 0.18);
+}
+
+.icon-btn--lg {
+  --control-height: var(--control-height-lg);
+  --control-radius: var(--btn-radius-lg);
+  --btn-icon-size: 24px;
+  --btn-shadow: 0 0 1px 0 oklch(0 0 0 / 0.3), 0 8px 12px 0 oklch(0 0 0 / 0.15);
+}
+
+/* Elevated */
+.icon-btn--elevated {
+  box-shadow: var(--btn-shadow);
+}
+
+/* Variants */
+.icon-btn--accent {
+  --btn-bg: var(--btn-accent-bg);
+  --btn-fg: var(--btn-accent-text);
+}
+
+.icon-btn--primary {
+  --btn-bg: var(--btn-primary-bg);
+  --btn-fg: var(--btn-primary-text);
+}
+
+.icon-btn--secondary {
+  --btn-bg: var(--btn-secondary-bg);
+  --btn-fg: var(--btn-secondary-text);
+}
+
+.icon-btn--tertiary {
+  --btn-bg: var(--color-bg-primary);
+  --btn-fg: var(--btn-tertiary-text);
+  --btn-bdr: 1px solid var(--color-bdr-interactive);
+}
+
+.icon-btn--ghost {
+  --btn-bg: var(--btn-ghost-bg);
+  --btn-fg: var(--btn-ghost-text);
+}
+
+.icon-btn--ghost.icon-btn--elevated {
+  --btn-bg: var(--color-bg-primary);
+}
+
+.icon-btn--inset-light {
+  --btn-bg: rgba(255, 255, 255, 0.9);
+  --btn-fg: var(--color-text-primary);
+  backdrop-filter: blur(8px);
+}
+
+.icon-btn--inset-light.icon-btn--elevated {
+  --btn-shadow: 0 4px 4px 0 oklch(0 0 0 / 0.25);
+}
+
+.icon-btn--inset-dark {
+  --btn-bg: rgba(34, 38, 33, 0.6);
+  --btn-fg: var(--color-text-primary-inverse);
+  backdrop-filter: blur(8px);
+}
+
+.icon-btn--inset-dark.icon-btn--elevated {
+  backdrop-filter: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .icon-btn {
+    transition: none;
+  }
+}

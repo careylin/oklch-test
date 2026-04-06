@@ -1,5 +1,6 @@
 .btn {
   --control-height: var(--control-height-md);
+  --control-radius: var(--btn-radius-md);
   --btn-bg: transparent;
   --btn-fg: inherit;
   --btn-bdr: none;
@@ -17,7 +18,7 @@
   justify-content: center;
   align-items: center;
   gap: 6px;
-  border-radius: 12px;
+  border-radius: var(--control-radius);
   cursor: pointer;
   white-space: nowrap;
   transition: filter 0.1s ease;
@@ -47,6 +48,7 @@
 .btn--xs {
   --control-height: var(--control-height-xs);
   --control-padding: var(--control-inlinePadding-xs);
+  --control-radius: var(--btn-radius-xs);
   font-size: 0.8em;
   --btn-shadow: 0 1px 2px oklch(0 0 0 / 0.12), 0 1px 4px oklch(0 0 0 / 0.08);
     &.btn--ghost::before {
@@ -56,6 +58,7 @@
 .btn--sm {
   --control-height: var(--control-height-sm);
   --control-padding: var(--control-inlinePadding-sm);
+  --control-radius: var(--btn-radius-sm);
   --btn-shadow: 0 1px 3px oklch(0 0 0 / 0.14), 0 2px 6px oklch(0 0 0 / 0.08);
     &.btn--ghost::before {
       inset-inline: -10px;
@@ -64,6 +67,7 @@
 .btn--md {
   --control-height: var(--control-height-md);
   --control-padding: var(--control-inlinePadding-md);
+  --control-radius: var(--btn-radius-md);
   --btn-shadow: 0 2px 4px oklch(0 0 0 / 0.14), 0 3px 10px oklch(0 0 0 / 0.08);
   &.btn--ghost::before {
       inset-inline: -16px;
@@ -72,6 +76,7 @@
 .btn--lg {
   --control-height: var(--control-height-lg);
   --control-padding: var(--control-inlinePadding-lg);
+  --control-radius: var(--btn-radius-lg);
   font-size: 1.05em;
   --btn-shadow: 0 3px 6px oklch(0 0 0 / 0.14), 0 5px 14px oklch(0 0 0 / 0.09);
     &.btn--ghost::before {
@@ -81,6 +86,7 @@
 .btn--xl {
   --control-height: var(--control-height-xl);
   --control-padding: var(--control-inlinePadding-xl);
+  --control-radius: var(--btn-radius-xl);
   font-size: 1.1em;
   --btn-shadow: 0 4px 8px oklch(0 0 0 / 0.15), 0 8px 20px oklch(0 0 0 / 0.1);
     &.btn--ghost::before {

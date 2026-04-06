@@ -23,6 +23,7 @@ interface BoxProps extends HTMLAttributes<HTMLElement> {
   radius?: Radius;
   border?: Border;
   shadow?: Shadow;
+  width?: string;
   asElement?: BoxElement;
 }
 
@@ -57,6 +58,7 @@ export function Box({
   radius,
   border,
   shadow,
+  width,
   asElement = "div",
   className,
   style,
@@ -84,7 +86,7 @@ export function Box({
       ]
         .filter(Boolean)
         .join(" ")}
-      style={{ ...paddingStyle, ...style }}
+      style={{ ...paddingStyle, width, ...style }}
       {...props}
     >
       {children}

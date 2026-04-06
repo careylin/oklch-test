@@ -15,7 +15,8 @@
 .inline--left   { justify-content: flex-start; }
 .inline--center { justify-content: center; }
 .inline--right  { justify-content: flex-end; }
+.inline--spread { justify-content: space-between; }
 
-/* Spread */
+/* Fit */
 .inline--fill > * { flex: 1; }
 .inline--hug  > * { flex: none; }

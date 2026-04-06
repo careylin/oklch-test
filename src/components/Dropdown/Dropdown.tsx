@@ -3,7 +3,8 @@ import type { KeyboardEvent } from "react";
 import { ChevronDown } from 'lucide-react';
 import "./Dropdown.css";
 
-type DropdownVariant = "accent" | "primary" | "secondary" | "default" | "ghost";
+type DropdownVariant = "accent" | "primary" | "secondary" | "tertiary" | "ghost";
+type Size = "sm" | "md" | "lg";
 
 export interface DropdownItem {
   label: string;
@@ -15,9 +16,10 @@ interface DropdownProps {
   label: string;
   items: DropdownItem[];
   variant?: DropdownVariant;
+  size?: Size;
 }
 
-export function Dropdown({ label, items, variant = "primary" }: DropdownProps) {
+export function Dropdown({ label, items, variant = "primary", size = "md" }: DropdownProps) {
   const [open, setOpen] = useState(false);
   const uid = useId();
   const menuId = `dropdown-menu-${uid}`;
@@ -79,7 +81,7 @@ export function Dropdown({ label, items, variant = "primary" }: DropdownProps) {
     <div className="dropdown-wrapper" ref={wrapperRef}>
       <button
         ref={triggerRef}
-        className={`dropdown-trigger dropdown-trigger--${variant}`}
+        className={`dropdown-trigger dropdown-trigger--${variant} dropdown-trigger--${size}`}
         aria-haspopup="menu"
         aria-expanded={open}
         aria-controls={menuId}

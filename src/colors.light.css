@@ -64,9 +64,9 @@
     --color-bdr-separator: oklch(var(--color-neutral-200) / var(--alpha-50));
 /* Text colors */
     --color-text-accent:oklch(var(--color-brand-neon));
-    --color-text-primary: lch(9.723% 0 282.863 / var(--alpha));
-    --color-text-secondary: lch(19.446% 1 282.863 / var(--alpha));
-    --color-text-tertiary: lch(38.893% 1 282.863 / var(--alpha));
+    --color-text-primary: oklch(0.2 0.01 145 / var(--alpha));
+    --color-text-secondary: oklch(0.34 0.01 145 / var(--alpha));
+    --color-text-tertiary: oklch(0.44 0.01 145 / var(--alpha));
     --color-text-primary-inverse: oklch(var(--color-neutral-white) / var(--alpha));
     --color-text-light:oklch(var(--color-neutral-white));
     --color-text-light-secondary: rgba(255, 255, 255, 0.6);
@@ -85,11 +85,21 @@
     --btn-ghost-text: var(--color-text-primary);  
 
 /*dimens*/
+    --btn-radius-xs: var(--radius-round);
+    --btn-radius-sm: var(--radius-round);
+    --btn-radius-md: var(--radius-round);
+    --btn-radius-lg: var(--radius-round);
+    --btn-radius-xl: var(--radius-round);
     --control-height-xs: 28px;
-    --control-height-sm: 36px;
+    --control-height-sm: 32px;
     --control-height-md: 40px;
     --control-height-lg: 48px;
     --control-height-xl: 52px;
+    --control-radius-xs: var(--radius-xs);
+    --control-radius-sm: var(--radius-sm);
+    --control-radius-md: var(--radius-md);
+    --control-radius-lg: var(--radius-lg);
+    --control-radius-xl: var(--radius-round);
     --control-inlinePadding-xs: 12px;
     --control-inlinePadding-sm: 12px;
     --control-inlinePadding-md: 16px;
@@ -97,10 +107,12 @@
     --control-inlinePadding-xl: 24px;
 
 /*radius*/
-    --radius-xs: 4px;
+    --radius-xxs: 4px;    
+    --radius-xs: 6px;
     --radius-sm: 8px;
     --radius-md: 12px;
     --radius-lg: 16px;
-    --radius-xl: 28px;
+    --radius-xl: 22px;
+    --radius-xxl: 30px;
     --radius-round: 999px;
 }
